@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  /* removes all the default margin and padding of the elements  */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  /* make list in the centre not on top */
+  align-items: center;
+  /* left and right padding is set to 16px . Padding divisible by 8 i.e.
+   8 , 16 24 ,32 makes website flow much nicer.*/
+  padding: 0 16px;
+  background-color: #cafdff;
+}
+
+header{
+    background-color: #eadcff;
+    /* removes the area of nav bar from total .
+     Now as soon as we scrol down , we reach next section.*/
+    height: calc(100vh - 70px);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 72px;
+}
+
+#subheader{
+    font-size: 32px;
+    margin: 16px 0 24px 0;
+}
+
+button{
+    color: white;
+    background: none;
+    padding: 8px 16px;
+    font-size: 24px;
+    /* cursor changes when hovering */
+    cursor: pointer;
+    background-color: #05c7cf;
+}
+
+a{
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+ul {
+    /* make list items horizontal */
+  display: flex;
+}
+
+li {
+    /* removes disc and seperates li items by 16px */
+  list-style-type: none;
+  padding: 16px;
+}
+
+
+.row{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    /* ele will be in center of page */
+    align-items: center;
+    justify-content: center;
+}
+
+#about,#discord
+,#contact,footer{
+    padding: 48px 0;
+}
+/* 
+
+ABOUT 
+
+*/
+
+#about{
+    background-color: #f8ffdc;
+}
+
+h2{
+font-size: 60px;
+text-align: center;
+margin-bottom: 24px;
+}
+
+.section-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img-wrapper{
+    /* image will be in 40% area */
+    width: 40%;
+}
+
+img{
+    /* image will be displayed in full size */
+    width: 100%;
+}
+
+.section-description-wrapper{
+    /* text will in 60 percent area */
+    width: 60%;
+}
+
+.section-description-wrapper,
+.about-img-wrapper{
+    padding: 0 24px;
+}
+
+.section-description-para{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* 
+
+Discord 
+
+*/
+#discord{
+    background-color: #cefeff;
+}
+
+/* 
+
+CONTACT 
+
+*/
+#contact{
+    background-color: #dce9ff;
+}
+form{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    /* changes form fields from row to column */
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+input,textarea{
+    margin-bottom: 24px;
+    font-size: 20px;
+    padding: 6px 12px;
+}
+
+/* 
+
+FOOTER
+
+*/
+footer{
+    background-color: #aaf5ff;
+    /* used to adjust the footer links and taking footer to center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo,.logo{
+max-width:480px;
+}
+
+.footer-logo{
+    margin-bottom: 16px;
+}
+
+.footer-links{
+    margin-bottom: 32px;
+}
+
+.footer-link{
+    padding: 0 16px;
+}
+/* SMALL PHONES , TABLETS , LARGE SMARTPHONES */
+
+@media (max-width: 728px){
+    /* everything here will be activated when max-width of screen is 728px.
+    if screen<728px activate css else dont even look at css */
+    .row{
+        flex-direction: column;
+    }
+
+    .home-description{
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-description-button{
+        max-width: 240px;
+    }
+    h1{
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .subheader{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    ul{
+        display: none;
+    }
+    .section-description{
+        flex-direction: column;
+    }
+    
+    .about-img-wrapper{
+        /* image will be in 1000% area */
+        width: 100%;
+    }
+
+    .section-description-wrapper{
+        /* text will in 1000 percent area */
+        width: 100%;
+    }
+
+    #discord .section-description{
+        flex-direction: column-reverse;
+    }
+
+    /* try to test till 350px */
+    footer{
+        padding: 48px 24px;;
+    }
+
+    .footer-link{
+        padding: 0 3px;
+        font-size: 18px;
+    }
+
+    .footer-links{
+        margin-bottom: 24px;
+    }
+
+
+}
